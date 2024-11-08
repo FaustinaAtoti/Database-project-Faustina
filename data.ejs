@@ -1,0 +1,20 @@
+<table>
+    <thead>
+        <tr>
+            <th> Beneficiary ID </th>
+            <th>  Name </th>
+            <th>  Email Address </th>
+            <th>  Location </th>
+        </tr>
+    </thead>
+    <tbody>
+        <% results.forEach(row =>{%>
+            <tr>
+                <td> <%= row.beneficiary_id %> </td>
+                <td> <%= row.name %> </td>
+                <td> <%= row.email_address %> </td>
+                <td> <%= row.location %> </td>
+            </tr>
+        <%});%>
+    </tbody>
+</table>
