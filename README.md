@@ -13,11 +13,17 @@ The next step was to connect my database to my application.But before that I had
  
  
 1.Run the following command to initalize the backend.
-2.npm init -y
-3.Run the following command to install the necessary dependancies
+
+2.npm init -y.
+
+3.Run the following command to install the necessary dependancies.
+
 4.npm install express mysql2 nodemon cors dotenv ejs
-5.Open .env file and add your workbench password (Save all changes)
+
+5.Open .env file and add your workbench password (Save all changes).
+
 6.Run this command node server.js
+
 7.Search this on your browser http://localhost:3300/data
 
  
