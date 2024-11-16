@@ -22,7 +22,9 @@ The next step was to connect my database to my application.But before that I had
 
 5.Open .env file and add your workbench password (Save all changes).
 
-6.Run this command node server.js
+Create a folder named views. This is where you will store all ejs files. The first file in the views folder will be data.ejs
+
+6.Run this command on your terminal: node server.js
 
 7.Search this on your browser http://localhost:3300/data
 
