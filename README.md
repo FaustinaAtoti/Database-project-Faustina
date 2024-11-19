@@ -23,7 +23,7 @@ The next step was to connect my database to my application.But before that I had
 
   Note: the body-parser package is middleware to parse incoming request bodies
 
-5.Open .env file and add your workbench password (Save all changes).
+5.Open .env file and add your workbench password (Save all changes).Also open a server.js file.
 
 $Create a folder named views. This is where you will store all ejs files. The first file in the views folder will be data.ejs
 $In your views folder add another file and name it insert.ejs(this is the file you will write your ejs code for forms)
