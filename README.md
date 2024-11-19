@@ -18,14 +18,25 @@ The next step was to connect my database to my application.But before that I had
 
 3.Run the following command to install the necessary dependancies.
 
-4.npm install express mysql2 nodemon cors dotenv ejs
+4.npm install express mysql2 nodemon cors dotenv ejs body-parser
+
+
+  Note: the body-parser package is middleware to parse incoming request bodies
 
 5.Open .env file and add your workbench password (Save all changes).
 
-Create a folder named views. This is where you will store all ejs files. The first file in the views folder will be data.ejs
+$Create a folder named views. This is where you will store all ejs files. The first file in the views folder will be data.ejs
+$In your views folder add another file and name it insert.ejs(this is the file you will write your ejs code for forms)
+
+
 
 6.Run this command on your terminal: node server.js
 
 7.Search this on your browser http://localhost:3300/data
+This will show the data retrieved from the database.
+
+
+8. To get to your form page search  http://localhost:3300/insert
+9. Test your page by filling in the form and checking if the data has been inserted to your database
 
  
