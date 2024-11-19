@@ -1,0 +1,49 @@
+<html >   
+<body>
+<div  class="container">
+    <h1>Beneficiaries Record</h1>
+    <form  id="newRecord">
+        <div >
+          <label for="name" >Beneficiary Name</label>
+          <input type="text"  id="name" name="name" >
+          
+        </div>
+        <div >
+          <label for="email_address" >Email Address</label>
+          <input type="text"  id="email_address" name="email_address" required>
+        </div>
+        <div  >
+            <label  for="location">Location</label>
+          <input type="text"  id="location" name="location" placeholder="City-Country" required>
+
+          
+        </div>
+        <button type="submit" >Submit</button>
+      </form>
+ </div>
+<script>
+// Handling form submission in Java Script
+document.getElementById('newRecord').addEventListener('submit',async function (event){
+    event.preventDefault(); 
+
+const name = document.getElementById('name').value;
+const email_address = document.getElementById('email_address').value;
+const location = document.getElementById('location').value;
+
+// send a post request to server
+const response = await fetch('/insert',{
+    method:'POST',
+    headers: {
+        'Content-Type':'application/json'
+    },
+    body: JSON.stringify({name,email_address,location})
+});
+
+const data = await response.json();
+console.log('Recorded successfully',data);
+
+});
+
+</script>
+</body>
+</html>
