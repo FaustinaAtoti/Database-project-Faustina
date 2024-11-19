@@ -52,6 +52,25 @@ app.get('/data', (req,res) => {
 });
 //new code is added above
 
+//part 2 new code goes below(post)
+app.get('/insert',(req,res) => {
+    res.render("insert");
+});
+
+app.post('/insert', (req,res) => {
+    const {name,email_address,location} = req.body;
+    const sql ='INSERT INTO beneficiaries(name,email_address,location)VALUES (?,?,?)';
+    db.query(sql,[name,email_address,location],(err,result)=>{
+        if(err){
+            return res.status(500).json({error:err.message});
+        }
+        res.status(201).json({id:result.insertId,name,email_address,location});
+    });
+});
+
+//part 2 new code goes above
+
+
 
 // Start the server 
 app.listen(process.env.PORT, () => {
