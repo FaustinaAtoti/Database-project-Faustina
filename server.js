@@ -70,6 +70,17 @@ app.post('/insert', (req,res) => {
 
 //part 2 new code goes above
 
+//part 3 below
+app.get('/index',(req,res) => {
+    res.render("index"); 
+});
+//part 3 above
+
+//part 4 below
+app.get('/donate',(req,res) => {
+    res.render("donate"); 
+});
+//part 4 above
 
 
 // Start the server 
