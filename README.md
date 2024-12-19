@@ -1,5 +1,5 @@
 # Database-project-Faustina
-
+Brief introduction; My project is about creating a food distribution management system that handles the zero hunger sdg.
  I installed Visual Studio Code and Node.js for this project.
 
  Used MySQL as my database system.
@@ -27,6 +27,8 @@ The next step was to connect my database to my application.But before that I had
 
 $Create a folder named views. This is where you will store all ejs files. The first file in the views folder will be data.ejs
 $In your views folder add another file and name it insert.ejs(this is the file you will write your ejs code for forms)
+$Create a file and name it index.ejs
+$ Create a file and name it donate.ejs
 
 
 
