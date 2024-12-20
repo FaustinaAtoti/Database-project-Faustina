@@ -33,6 +33,8 @@ $Create a file and name it index.ejs
 
 $ Create a file and name it donate.ejs
 
+Create a file and name it about.ejs
+
 
 
 6.Run this command on your terminal: node server.js
@@ -44,4 +46,8 @@ This will show the data retrieved from the database.
 8. To get to your form page search  http://localhost:3300/insert
 9. Test your page by filling in the form and checking if the data has been inserted to your database
 
+20/12/2024
+Now it's time to actually work on our front end
+
+On your browser search  http://localhost:3300/index
  
