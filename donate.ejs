@@ -1,14 +1,94 @@
 <html>
+ <head>
+    <style>
+body {
+    font-family: comic sans ms;
+} 
+.header {
+    background-color: lightcoral;
+    font-size: 26px;
+}   
+.intro {
+    font-size: 23px;
+    background-color: peachpuff;
+}
+
+#my_form {
+    font-size: 22px ;
+    background-color: lightcoral;
+}
+#button {
+    height: 40px;
+    font-size: 23px;
+    font-family: comic sans ms;
+    font-weight: bold;
+    background-color: aqua;
+}
+.top {
+    font-size: 23px;
+    font-weight: bold;
+}
+    </style>
+ </head>   
     <body>
-        <div>
-            <h1>FightHunger</h1>
-            <h2>Sign up to Donate Now</h2>
+        <div class="top">
+            <a href="index">Home</a>
         </div>
-        <div>
+        <div class="header" >
+            <h1>FightHunger</h1>
+            <h2>SIGN UP TO DONATE NOW</h2>
+        </div>
+        <div class="intro">
             <p>By sharing your name and email address, you agree that
                 FightHunger will use this information for the purpose of
                 contacting you to share step by step instructions on how you can help.
             </p>
         </div>
+<div>
+    <form id="my_form">
+        <div >
+            <label for="name" >Full Name</label>
+            <input type="text"  id="name" name="name" >
+            
+          </div>
+          <div >
+            <label for="email_address" >Email Address</label>
+            <input type="text"  id="email_address" name="email_address" required>
+          </div>
+          <div  >
+              
+            <input type="checkbox"  id="terms" name="terms" required>
+            <label  for="terms">I agree to be sent occational updates.</label> 
+            
+          </div>
+          <button type="submit" id="button" >Submit</button> 
+    </form>
+</div>
+
+<script>
+    // Handling form submission in Java Script
+    document.getElementById('my_form').addEventListener('submit',async function (event){
+        event.preventDefault(); 
+    
+    const name = document.getElementById('name').value;
+    const email_address = document.getElementById('email_address').value;
+    
+    
+    // send a post request to server
+    const response = await fetch('/donate',{
+        method:'POST',
+        headers: {
+            'Content-Type':'application/json'
+        },
+        body: JSON.stringify({name,email_address})
+    });
+    
+    const data = await response.json();
+    console.log('Sign up Successful',data);
+    
+    });
+    
+    </script>
+
     </body>
 </html>
