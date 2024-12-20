@@ -80,8 +80,24 @@ app.get('/index',(req,res) => {
 app.get('/donate',(req,res) => {
     res.render("donate"); 
 });
+
+app.post('/donate', (req,res) => {
+    const {name,email_address} = req.body;
+    const sql ='INSERT INTO donors(name,email_address)VALUES (?,?)';
+    db.query(sql,[name,email_address],(err,result)=>{
+        if(err){
+            return res.status(500).json({error:err.message});
+        }
+        res.status(201).json({id:result.insertId,name,email_address});
+    });
+});
 //part 4 above
 
+//part 5 below
+app.get('/about',(req,res) => {
+    res.render("about"); 
+});
+//part 5 above
 
 // Start the server 
 app.listen(process.env.PORT, () => {
